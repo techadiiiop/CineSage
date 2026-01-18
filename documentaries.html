@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentaries | CineSage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fas fa-film"></i>
+            <span>CineSage</span>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="tv-shows.html">TV Shows</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="documentaries.html" class="active">Documentaries</a></li>
+            </ul>
+        </nav>
+        
+        <div class="search-bar">
+            <input type="text" id="documentariesSearch" placeholder="Search documentaries...">
+            <button id="documentariesSearchBtn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Featured Documentaries</h1>
+            <p>Explore the real world through captivating documentaries. From nature to history and beyond.</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <div class="category-filter" id="categoryFilter">
+        <button class="category-btn active" data-category="all">All Documentaries</button>
+        <button class="category-btn" data-category="nature">Nature</button>
+        <button class="category-btn" data-category="history">History</button>
+        <button class="category-btn" data-category="science">Science</button>
+        <button class="category-btn" data-category="biography">Biography</button>
+        <button class="category-btn" data-category="society">Society</button>
+        <button class="category-btn" data-category="environment">Environment</button>
+        <button class="category-btn" data-category="sport">Sport</button>
+        <button class="category-btn" data-category="crime">Crime</button>
+        <button class="category-btn" data-category="drama">Drama</button>
+    </div>
+
+    <!-- Documentaries Grid -->
+    <section class="movies-container">
+        <div class="movies-grid" id="documentariesGrid">
+            <!-- Documentary cards will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Detail Modal -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <div class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </div>
+            <img src="" alt="Documentary Poster" class="modal-poster" id="modalPoster">
+            <div class="modal-info">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-meta">
+                    <span class="modal-year" id="modalYear"></span>
+                    <span class="modal-duration" id="modalDuration"></span>
+                    <span class="modal-rating" id="modalRating"></span>
+                </div>
+                <div class="modal-tags" id="modalTags"></div>
+                <p class="modal-description" id="modalDescription"></p>
+                
+                <div class="why-watch">
+                    <h3>Why You Should Watch</h3>
+                    <ul id="whyWatchList"></ul>
+                </div>
+                
+                <div class="documentary-info">
+                    <div class="info-item">
+                        <span class="info-label">Type:</span>
+                        <span class="info-value" id="documentaryType"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Narrator:</span>
+                        <span class="info-value" id="narratorName"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Focus:</span>
+                        <span class="info-value" id="documentaryFocus"></span>
+                    </div>
+                </div>
+                
+                <h3>Available On:</h3>
+                <div class="platforms" id="platforms"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>CineSage</h3>
+                <p>Discover, explore, and enjoy the best of documentaries. We help you find your next educational and inspiring watch with spoiler-free insights.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="movies.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                    <li><a href="tv-shows.html"><i class="fas fa-chevron-right"></i> TV Shows</a></li>
+                    <li><a href="anime.html"><i class="fas fa-chevron-right"></i> Anime</a></li>
+                    <li><a href="documentaries.html"><i class="fas fa-chevron-right"></i> Documentaries</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Documentary Topics</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Nature</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Science</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Biography</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Society</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 CineSage. All rights reserved. This site is for educational purposes only.
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="data.js"></script>
+    <script src="documentaries.js"></script>
+</body>
+</html>
