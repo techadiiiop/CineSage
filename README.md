@@ -1,7 +1,3 @@
-Here's what you should include in your **README.md** file for your CineSage movie/anime/documentary recommendation website project:
-
----
-
 # 🎬 CineSage - Movie & TV Show Discovery Platform
 
 A modern, responsive web application for discovering and exploring movies, TV shows, anime, and documentaries with personalized recommendations and detailed insights.
